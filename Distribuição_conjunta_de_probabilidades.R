@@ -48,3 +48,26 @@ prob_table <- freq_table[,-1]/10
 prob_table
 
 View(prob_table)
+
+a = c(1,2,3,1,3,2,3,1,2,3)
+b = c(2,1,3,1,3,3,2,1,2,3)
+a
+b
+ab = cbind(a, b)
+ab = as.data.frame(ab)
+ab
+amin= min(ab$a)
+amin
+amax = max(ab$a)
+amax
+bmin = min(ab$b)
+bmin
+bmax = max(ab$b)
+bmax
+freq_table <- ddply(rolls1, ~a, summarize,
+                    "1"=sum(b==1),"2"=sum(b==2), "3"= sum(b==3))
+row.names(freq_table) <- c(amin: amax)
+
+prob_table <- freq_table[,-1]/10
+prob_table
+
