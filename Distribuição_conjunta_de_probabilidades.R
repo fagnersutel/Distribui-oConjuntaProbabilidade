@@ -56,6 +56,7 @@ b
 ab = cbind(a, b)
 ab = as.data.frame(ab)
 ab
+rolls1 <- ab
 amin= min(ab$a)
 amin
 amax = max(ab$a)
@@ -70,4 +71,3 @@ row.names(freq_table) <- c(amin: amax)
 
 prob_table <- freq_table[,-1]/10
 prob_table
-
