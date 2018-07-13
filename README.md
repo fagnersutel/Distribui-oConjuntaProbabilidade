@@ -1,0 +1,2 @@
+# Distribui-oConjuntaProbabilidade
+Distribuição Conjunta Probabilidade
